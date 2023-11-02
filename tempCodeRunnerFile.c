@@ -1,1 +1,3 @@
-return
+fflush(read);
+  // fflush(write);
+  

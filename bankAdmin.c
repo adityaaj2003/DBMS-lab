@@ -59,8 +59,8 @@ void unBlock()
      long card;
      printf("Enter the card number to be unblocked\n");
      scanf("%ld",&card);
-      char newline[100],line2[100],line[100];
-      while (fgets(line, 100, read) != NULL)
+      char newline[1024],line2[1024],line[1024];
+      while (fgets(line, 1024, read) != NULL)
       { 
         strcpy(line2,line);
         char *status1=strtok(line,"||");
@@ -122,14 +122,14 @@ void addMoney()
   bank.atmBal+=money;
   sprintf(newLine,"%f\n",bank.atmBal);
   fprintf(atm,newLine);
-  fclose(atm);
+  fclose(atm); 
 }
 void main()
 {
    int choice;
    while(1)
    {
-    printf("Emter the choice\n1-Create account 2-View accounts 3-Unblock 4-View balance in ATM 5-Add money to ATM 0-Exit\n");
+    printf("\n\n<---Emter the choice--->\n1-Create account 2-View accounts 3-Unblock 4-View balance in ATM 5-Add money to ATM 0-Exit\n");
     scanf("%d",&choice);
     switch(choice)
     {
